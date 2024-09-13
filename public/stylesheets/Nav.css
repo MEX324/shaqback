@@ -1,0 +1,72 @@
+:root {
+  --primary-color: #000; /* Color principal (negro) */
+  --secondary-color: #fff; /* Color secundario (blanco) */
+  --accent-color: #ffc107; /* Color de acento */
+  --background-color: #f7f7f7; /* Color de fondo */
+  --font-family: 'Open Sans', sans-serif; /* Familia de fuentes */
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed; /* Fijo la barra de navegación */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Para que esté encima de otros elementos */
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav li {
+  margin-right: 20px;
+}
+
+header nav a {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* header nav a::before {
+  content: url("../../../public/images/bball.png");
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 10px;
+} */
+
+header nav a:hover {
+  color: var(--accent-color);
+}
+
+header nav a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.logo img {
+  width: 400px;
+  height: 3.5rem;
+  object-fit: contain;
+}
